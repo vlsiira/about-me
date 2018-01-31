@@ -1,9 +1,15 @@
 'use strict';
 
-//const questions = [birthCity, favFood, cutestAnimal, amountChickens, loveChickens];
-//questions[0,1,2,3,4].toLowerCase();
+/*I tried to add .toLowerCase() to my variabless with an array, but it didn't work.
+  Perhaps because arrays don't accept variables?  My attempt below:
+    const questions = [birthCity, favFood, cutestAnimal, amountChickens, loveChickens];
+    questions[0,1,2,3,4].toLowerCase();
+*/
 
+
+// Question about birth city.
 const birthCity = prompt('Were you born in Paris?');
+
 if (birthCity.toLowerCase() === 'yes' || birthCity.toLowerCase() === 'y') {
     alert('No, I was born in Springfield');
 } else if (birthCity.toLowerCase() === 'no' || birthCity.toLowerCase() === 'n') {
@@ -13,7 +19,10 @@ if (birthCity.toLowerCase() === 'yes' || birthCity.toLowerCase() === 'y') {
 }
 console.log('Born in Paris?: ' + birthCity);
 
+
+// Question about favorite food.
 const favFood = prompt('Is your favorite food sushi?');
+
 if (favFood.toLowerCase() === 'yes' || favFood.toLowerCase() === 'y') {
     alert('Correct!');
 } else if (favFood.toLowerCase() === 'no' || favFood.toLowerCase() === 'n') {
@@ -23,7 +32,10 @@ if (favFood.toLowerCase() === 'yes' || favFood.toLowerCase() === 'y') {
 }
 console.log('Favorite food sushi?: ' + favFood);
 
+
+// Question about cutest animal.
 const cutestAnimal = prompt('Is the otter the cutest animal?');
+
 if (cutestAnimal.toLowerCase() === 'yes' || cutestAnimal.toLowerCase() === 'y') {
     alert('Correct!');
 } else if (cutestAnimal.toLowerCase() === 'no' || cutestAnimal.toLowerCase() === 'n') {
@@ -33,7 +45,10 @@ if (cutestAnimal.toLowerCase() === 'yes' || cutestAnimal.toLowerCase() === 'y') 
 }
 console.log('Cutest animal?: ' + cutestAnimal);
 
+
+// Question about amount of chickens.
 const amountChickens = prompt('Do you have 100 chickens?');
+
 if (amountChickens.toLowerCase() === 'yes' || amountChickens.toLowerCase() === 'y') {
     alert('No, I only have 3');
 } else if (amountChickens.toLowerCase() === 'no' || amountChickens.toLowerCase() === 'n') {
@@ -43,7 +58,10 @@ if (amountChickens.toLowerCase() === 'yes' || amountChickens.toLowerCase() === '
 }
 console.log('Amount of chickens?: ' + amountChickens);
 
+
+// Question about love of chickens.
 const loveChickens = prompt('Do you love your chickens?');
+
 if (loveChickens.toLowerCase() === 'yes' || loveChickens.toLowerCase() === 'y') {
     alert('Correct!');
 } else if (loveChickens.toLowerCase() === 'no' || loveChickens.toLowerCase() === 'n') {
@@ -53,7 +71,9 @@ if (loveChickens.toLowerCase() === 'yes' || loveChickens.toLowerCase() === 'y') 
 }
 console.log('Love chickens?: ' + loveChickens);
 
-/*
+
+/*********** From Class 1
+
 const birthCity = prompt('What city were you born in?')
 alert('You were born in ' + birthCity)
 console.log('birth city is: ' + birthCity)
@@ -69,4 +89,4 @@ console.log('cutest animal is: ' + cutestAnimal)
 const amountChickens = prompt('How many chickens do you have?')
 alert('You were born in ' + birthCity + ' where you like to eat ' + favFood + ' with ' + cutestAnimal + ' and ' + amountChickens + ' chickens')
 console.log('number of chickens: ' + amountChickens)
-*/
+***********/
