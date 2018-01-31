@@ -7,13 +7,13 @@
     questions[0,1,2,3,4].toLowerCase();
 */
 
-
+/*
 // Question about birth city.
-const birthCity = prompt('Were you born in Paris?');
+const birthCity = prompt('Were you born in Paris?').toLowerCase();
 
-if (birthCity.toLowerCase() === 'yes' || birthCity.toLowerCase() === 'y') {
+if (birthCity === 'yes' || birthCity === 'y') {
     alert('No, I was born in Springfield');
-} else if (birthCity.toLowerCase() === 'no' || birthCity.toLowerCase() === 'n') {
+} else if (birthCity === 'no' || birthCity === 'n') {
     alert('Correct!');
 } else {
     const notYN = prompt('Please respond yes/no');
@@ -22,11 +22,11 @@ console.log('Born in Paris?: ' + birthCity);
 
 
 // Question about favorite food.
-const favFood = prompt('Is your favorite food sushi?');
+const favFood = prompt('Is your favorite food sushi?').toLowerCase();
 
-if (favFood.toLowerCase() === 'yes' || favFood.toLowerCase() === 'y') {
+if (favFood === 'yes' || favFood === 'y') {
     alert('Correct!');
-} else if (favFood.toLowerCase() === 'no' || favFood.toLowerCase() === 'n') {
+} else if (favFood === 'no' || favFood === 'n') {
     alert('Sorry, sushi is delicious');
 } else {
     const notYN = prompt('Please respond yes/no');
@@ -35,11 +35,11 @@ console.log('Favorite food sushi?: ' + favFood);
 
 
 // Question about cutest animal.
-const cutestAnimal = prompt('Is the otter the cutest animal?');
+const cutestAnimal = prompt('Is the otter the cutest animal?').toLowerCase();
 
-if (cutestAnimal.toLowerCase() === 'yes' || cutestAnimal.toLowerCase() === 'y') {
+if (cutestAnimal === 'yes' || cutestAnimal === 'y') {
     alert('Correct!');
-} else if (cutestAnimal.toLowerCase() === 'no' || cutestAnimal.toLowerCase() === 'n') {
+} else if (cutestAnimal === 'no' || cutestAnimal === 'n') {
     alert('Sorry, nothing is cuter than an otter');
 } else {
     const notYN = prompt('Please respond yes/no');
@@ -48,11 +48,11 @@ console.log('Cutest animal?: ' + cutestAnimal);
 
 
 // Question about amount of chickens.
-const amountChickens = prompt('Do you have 100 chickens?');
+const amountChickens = prompt('Do you have 100 chickens?').toLowerCase();
 
-if (amountChickens.toLowerCase() === 'yes' || amountChickens.toLowerCase() === 'y') {
+if (amountChickens === 'yes' || amountChickens === 'y') {
     alert('No, I only have 3');
-} else if (amountChickens.toLowerCase() === 'no' || amountChickens.toLowerCase() === 'n') {
+} else if (amountChickens === 'no' || amountChickens === 'n') {
     alert('Correct!');
 } else {
     const notYN = prompt('Please respond yes/no');
@@ -61,16 +61,40 @@ console.log('Amount of chickens?: ' + amountChickens);
 
 
 // Question about love of chickens.
-const loveChickens = prompt('Do you love your chickens?');
+const loveChickens = prompt('Do you love your chickens?').toLowerCase();
 
-if (loveChickens.toLowerCase() === 'yes' || loveChickens.toLowerCase() === 'y') {
+if (loveChickens === 'yes' || loveChickens === 'y') {
     alert('Correct!');
-} else if (loveChickens.toLowerCase() === 'no' || loveChickens.toLowerCase() === 'n') {
+} else if (loveChickens === 'no' || loveChickens === 'n') {
     alert('Incorrect.  I love them very much!');
 } else {
     const notYN = prompt('Please respond yes/no');
 }
 console.log('Love chickens?: ' + loveChickens);
+*/
+
+
+//Question about favorite number.
+
+let guess = parseInt(prompt('What is my favorite number?'));
+let i = 0;
+
+while (i < 3) {
+    i++;
+    if (guess === 12) {
+        alert('Correct!');
+        break;
+    } else if (guess < 12) {
+        alert('too low');
+        guess = parseInt(prompt('What is my favorite number?'));
+    } else if (guess > 12) {
+        alert('too high');
+        guess = parseInt(prompt('What is my favorite number?'));
+    } else {
+        guess = parseInt(prompt('Please enter an integer'));
+    }
+}
+console.log('Favorite number: user guessed: ' + guess);
 
 
 /*********** From Class 1
