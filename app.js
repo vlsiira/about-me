@@ -1,5 +1,6 @@
 'use strict';
 
+
 /*I tried to add .toLowerCase() to my variabless with an array, but it didn't work.
   Perhaps because arrays don't accept variables?  My attempt below:
     const questions = [birthCity, favFood, cutestAnimal, amountChickens, loveChickens];
