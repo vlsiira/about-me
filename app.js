@@ -74,8 +74,9 @@ console.log('Love chickens?: ' + loveChickens);
 */
 
 
-//Question about favorite number.
+//Question 6: about favorite number.
 
+/*
 let guess = parseInt(prompt('What is my favorite number?'));
 let i = 0;
 
@@ -95,6 +96,26 @@ while (i < 3) {
     }
 }
 console.log('Favorite number: user guessed: ' + guess);
+*/
+
+
+//Question 7: about other states lived in
+
+let states = ['virginia', 'michigan'];
+let guessState = prompt('Beside Oregon, what other states have I lived in?').toLowerCase();
+
+for (let j = 0; j < 6; j++){
+    if (guessState === states[j]) {
+        alert('Correct!  I have lived in Virginia and Michigan.');
+        break;
+    } else if (j === 5) {
+        alert('You are out of guesses.  I\'ve lived in Virginia and Michigan.')
+    } else {
+        prompt('Beside Oregon, what other states have I lived in?').toLowerCase();
+    }
+console.log(j);
+}
+
 
 
 /*********** From Class 1
