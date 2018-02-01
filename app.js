@@ -1,32 +1,31 @@
 'use strict';
 
+const name = prompt('Hi!  What is your name?');
 
-/*I tried to add .toLowerCase() to my variabless with an array, but it didn't work.
-  Perhaps because arrays don't accept variables?  My attempt below:
-    const questions = [birthCity, favFood, cutestAnimal, amountChickens, loveChickens];
-    questions[0,1,2,3,4].toLowerCase();
-*/
+let tally = [];
 
 
-// Question about birth city.
-const birthCity = prompt('Were you born in Paris?');
+// Question 1: about birth city.
+const birthCity = prompt('Were you born in Paris?').toLowerCase();
 
-if (birthCity.toLowerCase() === 'yes' || birthCity.toLowerCase() === 'y') {
+if (birthCity === 'yes' || birthCity === 'y') {
     alert('No, I was born in Springfield');
-} else if (birthCity.toLowerCase() === 'no' || birthCity.toLowerCase() === 'n') {
+} else if (birthCity === 'no' || birthCity === 'n') {
     alert('Correct!');
+    console.log(tally.push(1));
 } else {
     const notYN = prompt('Please respond yes/no');
 }
 console.log('Born in Paris?: ' + birthCity);
 
 
-// Question about favorite food.
-const favFood = prompt('Is your favorite food sushi?');
+// Question 2: about favorite food.
+const favFood = prompt('Is your favorite food sushi?').toLowerCase();
 
-if (favFood.toLowerCase() === 'yes' || favFood.toLowerCase() === 'y') {
+if (favFood === 'yes' || favFood === 'y') {
     alert('Correct!');
-} else if (favFood.toLowerCase() === 'no' || favFood.toLowerCase() === 'n') {
+    console.log(tally.push(2));
+} else if (favFood === 'no' || favFood === 'n') {
     alert('Sorry, sushi is delicious');
 } else {
     const notYN = prompt('Please respond yes/no');
@@ -34,12 +33,13 @@ if (favFood.toLowerCase() === 'yes' || favFood.toLowerCase() === 'y') {
 console.log('Favorite food sushi?: ' + favFood);
 
 
-// Question about cutest animal.
-const cutestAnimal = prompt('Is the otter the cutest animal?');
+// Question 3: about cutest animal.
+const cutestAnimal = prompt('Is the otter the cutest animal?').toLowerCase();
 
-if (cutestAnimal.toLowerCase() === 'yes' || cutestAnimal.toLowerCase() === 'y') {
+if (cutestAnimal === 'yes' || cutestAnimal === 'y') {
     alert('Correct!');
-} else if (cutestAnimal.toLowerCase() === 'no' || cutestAnimal.toLowerCase() === 'n') {
+    console.log(tally.push(3));
+} else if (cutestAnimal === 'no' || cutestAnimal === 'n') {
     alert('Sorry, nothing is cuter than an otter');
 } else {
     const notYN = prompt('Please respond yes/no');
@@ -47,25 +47,27 @@ if (cutestAnimal.toLowerCase() === 'yes' || cutestAnimal.toLowerCase() === 'y') 
 console.log('Cutest animal?: ' + cutestAnimal);
 
 
-// Question about amount of chickens.
-const amountChickens = prompt('Do you have 100 chickens?');
+// Question 4: about amount of chickens.
+const amountChickens = prompt('Do you have 100 chickens?').toLowerCase();
 
-if (amountChickens.toLowerCase() === 'yes' || amountChickens.toLowerCase() === 'y') {
+if (amountChickens === 'yes' || amountChickens === 'y') {
     alert('No, I only have 3');
-} else if (amountChickens.toLowerCase() === 'no' || amountChickens.toLowerCase() === 'n') {
+} else if (amountChickens === 'no' || amountChickens === 'n') {
     alert('Correct!');
+    console.log(tally.push(4));
 } else {
     const notYN = prompt('Please respond yes/no');
 }
 console.log('Amount of chickens?: ' + amountChickens);
 
 
-// Question about love of chickens.
-const loveChickens = prompt('Do you love your chickens?');
+// Question 5: about love of chickens.
+const loveChickens = prompt('Do you love your chickens?').toLowerCase();
 
-if (loveChickens.toLowerCase() === 'yes' || loveChickens.toLowerCase() === 'y') {
+if (loveChickens === 'yes' || loveChickens === 'y') {
     alert('Correct!');
-} else if (loveChickens.toLowerCase() === 'no' || loveChickens.toLowerCase() === 'n') {
+    console.log(tally.push(5));
+} else if (loveChickens === 'no' || loveChickens === 'n') {
     alert('Incorrect.  I love them very much!');
 } else {
     const notYN = prompt('Please respond yes/no');
@@ -73,21 +75,76 @@ if (loveChickens.toLowerCase() === 'yes' || loveChickens.toLowerCase() === 'y') 
 console.log('Love chickens?: ' + loveChickens);
 
 
-/*********** From Class 1
 
-const birthCity = prompt('What city were you born in?')
-alert('You were born in ' + birthCity)
-console.log('birth city is: ' + birthCity)
+//Question 6: about favorite number.
 
-const favFood = prompt('What is your favorite food?')
-alert('You were born in ' + birthCity + ', where you like to eat ' + favFood)
-console.log('favorite food is: ' + favFood)
+let guess = parseInt(prompt('What is my favorite number?'));
+let i = 0;
 
-const cutestAnimal = prompt('What is the cutest animal?')
-alert('You were born in ' + birthCity + ', where you like to eat ' + favFood + ' with ' + cutestAnimal)
-console.log('cutest animal is: ' + cutestAnimal)
+while (i < 3) {
+    i++;
+    if (guess === 12) {
+        alert('Correct!');
+        console.log(tally.push(6));
+        break;
+    } else if (guess < 12) {
+        alert('too low');
+        guess = parseInt(prompt('What is my favorite number?'));
+    } else if (guess > 12) {
+        alert('too high');
+        guess = parseInt(prompt('What is my favorite number?'));
+    } else {
+        guess = parseInt(prompt('Please enter an integer'));
+    }
+}
 
-const amountChickens = prompt('How many chickens do you have?')
-alert('You were born in ' + birthCity + ' where you like to eat ' + favFood + ' with ' + cutestAnimal + ' and ' + amountChickens + ' chickens')
-console.log('number of chickens: ' + amountChickens)
-***********/
+
+
+//Question 7: about other states lived in
+
+let states = ['virginia', 'michigan'];
+let guessState = prompt('Beside Oregon, what other states have I lived in?').toLowerCase();
+
+for (let j = 0; j < 6; j++){
+    if (states.includes(guessState)) {
+        alert('Correct!  I have lived in Virginia and Michigan.');
+        console.log(tally.push(7));
+        break;
+    } else if (j === 5) {
+        alert('You are out of guesses.  I\'ve lived in Virginia and Michigan.');
+    } else {
+        prompt('Beside Oregon, what other states have I lived in?').toLowerCase();
+    }
+}
+
+
+// score message
+if (tally.length === 0) {
+    alert('Hi ' + name + ', you answered 0 of 7 questions correctly!');
+}
+if (tally.length === 1) {
+    alert('Hi ' + name + ', you answered 1 of 7 questions correctly!');
+}
+if (tally.length === 2) {
+    alert('Hi ' + name + ', you answered 2 of 7 questions correctly!');
+}
+if (tally.length === 3) {
+    alert('Hi ' + name + ', you answered 3 of 7 questions correctly!');
+}
+if (tally.length === 4) {
+    alert('Hi ' + name + ', you answered 4 of 7 questions correctly!');
+}
+if (tally.length === 5) {
+    alert('Hi ' + name + ', you answered 5 of 7 questions correctly!');
+}
+if (tally.length === 6) {
+    alert('Hi ' + name + ', you answered 6 of 7 questions correctly!');
+}
+if (tally.length === 7) {
+    alert('Hi ' + name + ', you answered 7 of 7 questions correctly!');
+}
+
+
+
+
+
