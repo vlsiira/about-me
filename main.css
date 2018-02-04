@@ -1,14 +1,15 @@
 body {
-    background-color: yellow;
+    background-color: #F5A952;
 }
 
 h1 {
-    border: 1px solid red;
-    color: red;
+    color: #3F2014;
     text-align: center;
 }
+h2 {
+    color: #4C1319;
+}
 section {
-    border: 1px solid red;
     width: 410px;
     margin: 20px;
     padding: 10px;

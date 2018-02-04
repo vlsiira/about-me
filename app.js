@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 const name = prompt('Hi!  What is your name?');
 
 let tally = [];
@@ -53,6 +53,7 @@ function question3() {
 }
 question3();
 
+
 // Question 4: about amount of chickens.
 const amountChickens = prompt('Do you have 100 chickens?').toLowerCase();
 function question4() {
@@ -68,6 +69,7 @@ function question4() {
 }
 
 question4();
+
 
 // Question 5: about love of chickens.
 const loveChickens = prompt('Do you love your chickens?').toLowerCase();
@@ -132,6 +134,7 @@ function question7() {
 }
 question7();
 
+
 // score message
 if (tally.length === 0) {
     alert('Hi ' + name + ', you answered 0 of 7 questions correctly!');
@@ -157,4 +160,3 @@ if (tally.length === 6) {
 if (tally.length === 7) {
     alert('Hi ' + name + ', you answered 7 of 7 questions correctly!');
 }
-*/
