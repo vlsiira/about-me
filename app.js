@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 const name = prompt('Hi!  What is your name?');
 
 let tally = [];
@@ -157,3 +157,4 @@ if (tally.length === 6) {
 if (tally.length === 7) {
     alert('Hi ' + name + ', you answered 7 of 7 questions correctly!');
 }
+*/

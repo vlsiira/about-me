@@ -3,5 +3,18 @@ body {
 }
 
 h1 {
+    border: 1px solid red;
     color: red;
+    text-align: center;
+}
+section {
+    border: 1px solid red;
+    width: 410px;
+    margin: 20px;
+    padding: 10px;
+}
+#activities {
+    position: relative;
+    bottom: 305px;
+    left: 470px;
 }
