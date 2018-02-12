@@ -1,21 +1,26 @@
 body {
-    background-color: #F5A952;
+    background-color: #297C45;
 }
 
 h1 {
     color: #3F2014;
     text-align: center;
+    font-family: 'Nanum Pen Script', cursive;
 }
-h2 {
-    color: #4C1319;
-}
+
 section {
     width: 410px;
     margin: 20px;
     padding: 10px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#places {
+    background-color: #4E9C68;
 }
 #activities {
+    background-color: #4E9C68;
     position: relative;
-    bottom: 305px;
+    bottom: 500px;
     left: 470px;
 }
